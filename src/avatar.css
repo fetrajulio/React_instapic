@@ -1,0 +1,33 @@
+.avatar {
+    
+    
+    text-align: center;
+}
+
+.avatar > img {
+    width: 110px;
+    height: 110px;
+    margin: auto;
+    border-radius: 100%;
+    border: 1px solid rgb(170 170 173/ 1);
+    box-shadow: 0px 3px 10px 3px rgb(170 170 173 / 0.5);
+}
+
+.icon > img{
+    width: 15%;
+    margin: 7px;
+    height: 15%;    
+}
+.send > img{
+    width: 60%;
+
+    height: 60%;    
+}
+.storie > img{
+    width: 70px;
+    margin: 7px;
+    height: 70px; 
+    border-radius: 100%;
+    border: 1px solid rgb(170 170 173/ 1);
+    box-shadow: 0px 3px 10px 3px rgb(170 170 173 / 0.5);
+}

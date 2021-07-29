@@ -59,6 +59,7 @@ class Apl2 extends React.Component{
         </div>
     }
 }
+/*
 const rootElement = document.getElementById("root2");
 ReactDOM.render(<Apl2 />,rootElement);
-export default Apl2;
+export default Apl2;*/
