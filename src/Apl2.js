@@ -1,0 +1,1 @@
+//APL3.js sy Index.js no napesaiko fa manao ereur vo fafana ito 
