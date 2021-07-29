@@ -29,7 +29,11 @@ import km1 from'./img/km1.jpg';
 import km2 from'./img/km2.jpg';
 import km3 from'./img/km3.jpg';
 import km4 from'./img/km4.jpg';
-
+import d from './img/down.png';
+import com from './img/com.png'
+import s1 from './img/home.png';
+import s2 from './img/home2.png';
+import s3 from './img/home3.png';
 
 class Apl3 extends React.Component{
     state = {
@@ -49,16 +53,31 @@ class Apl3 extends React.Component{
         const imgs= 
         this.state.joueurs.map((j)=>{
            return   <div>
-                        <h5>Rang:{j.id} _{j.nom}</h5>
+                        {j.img.map((x)=><div class="gallery-item"><div >
+                        <div class="row">
+                            <div class="col-1">
+                            <div class="storie">
+                                <img src={j.img.find(element => element)}></img>
+                            </div>
+                            </div>
+                            <div class="col-10"><br></br><h5> __{j.nom} </h5></div>
+                                
+                            
+                        </div>
+                            <img  src={x}   alt="fireSpot"/>
                         
-                        {j.img.map((x)=><div class="gallery-item"><div ><img  src={x}   alt="fireSpot"/>
-                            <div class="row">
-                                <div class="1">
-                                    <div class="send"><a><img src={s4}></img></a> </div>
+                        <br></br>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-4">
+                                        <div class="send"><img src={s3}></img><img src={com}></img><img src={d}></img> </div>
+                                    </div>
+                                    <div class="col-8"></div>
                                 </div>
                             </div>
+                            
                             <div class="row">
-                                <div class="col-11"><textarea class="form-control" id="exampleTextarea" rows="1"></textarea></div>
+                                <div class="col-11"><textarea class="form-control" id="exampleTextarea" rows="2"></textarea></div>
                                 <div class="col-1"> <div class="send"><a><img src={s4}></img></a> </div></div>
                             </div>
                         
@@ -76,6 +95,7 @@ class Apl3 extends React.Component{
        }            
        )
         return(
+            <div>
 
             <div class="countener">
                 <br></br><br></br> <br></br>
@@ -83,6 +103,15 @@ class Apl3 extends React.Component{
                 <div class="row">
                     <div class="col-1"></div>
                     <div class="col-8">
+                    <div class="card bg-light mb-3">
+                            <div class="card-header">
+                            <div class="storie">
+                                <img src={zil}></img><img src={gz1}></img><img src={km1}></img><img src={km2}></img><img src={km3}></img><img src={hz1}></img>
+                                <img src={dv1}></img><img src={hl1}></img><img src={hl3}></img><img src={hl2}></img>
+                             </div>
+                            </div>
+                            
+                        </div>
                         <div class="card border-primary mb-3">
                             <div class="card-header">
                             <div class="storie">
@@ -91,13 +120,6 @@ class Apl3 extends React.Component{
                             </div>
                             
                         </div>
-                    <div class="card border-Dark mb-3">
-                        
-                        <div class="card-body">
-                            <h4 class="card-title">Kimmich</h4>
-                            <img id="sary"  src={km5}   alt="fireSpot"/>
-                        </div>
-                    </div>
                         
                     </div>
                     <div class="col-3">
@@ -113,6 +135,7 @@ class Apl3 extends React.Component{
                     </div>
                 </div>
                
+            </div>
             </div>
         );
     }
