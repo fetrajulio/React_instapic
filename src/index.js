@@ -1,3 +1,4 @@
+//APLL3 sy INDEX ian no MIASA APL aplication de ny index Navbar
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';

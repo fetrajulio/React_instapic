@@ -1,3 +1,4 @@
+//APLL3 sy INDEX ian no MIASA APL aplication de ny index Navbar
 import React from 'react';
 import ReactDOM from 'react-dom';
 import km5 from'./img/km5.jpg';
@@ -5,6 +6,7 @@ import zil from './img/zily.jpg';
 import './sary.css';
 import s4 from './img/home4.png';
 import './avatar.css';
+
 import hz1 from'./img/hz.jpeg';
 import hz2 from'./img/hz2.jpg';
 import hz3 from'./img/hz3.jpg';
@@ -38,18 +40,15 @@ import s3 from './img/home3.png';
 class Apl3 extends React.Component{
     state = {
         joueurs :[
-            {id:1, nom:"Kimmich", img :[km1,km2,km3,km4,km5]},
-            {id:2, nom:"Halland", img :[hl1,hl2,hl3,hl4,hl5]},
-            {id:3,nom: "Hazard", img :[hz1,hz2,hz3,hz4,hz5]},
-            {id:4, nom:"Goretzka", img :[gz1,gz2,gz3,gz4,gz5]},
-            {id:5, nom:"davies", img :[dv1,dv2,dv3,dv4,dv5]}
+            {id:1, nom:"Kimmich",coms:"#kimich 08 MIA SAN MIA", img :[km2,km1,km3,km4,km5]},
+            {id:2, nom:"Halland",coms:"#Halland 09 King of Foot", img :[hl5,hl2,hl3,hl4,hl1]},
+            {id:3,nom: "Hazard", coms:"#Hazard 10 Best Player",img :[hz4,hz2,hz3,hz1,hz5]},
+            {id:4, nom:"Goretzka", coms:"#Gore 18 Plus Costo",img :[gz1,gz2,gz3,gz4,gz5]},
+            {id:5, nom:"davies", coms:"#Davies 19 Plus Rapide",img :[dv1,dv2,dv3,dv4,dv5]}
         ]
     }
     render(){
-        const img =this.state.joueurs.map((j)=>{
-            j.img.map((x)=><p>{j.nom}</p> )
-           
-        })
+        
         const imgs= 
         this.state.joueurs.map((j)=>{
            return   <div>
@@ -62,7 +61,8 @@ class Apl3 extends React.Component{
                             </div>
                             <div class="col-10"><br></br><h5> __{j.nom} </h5></div>
                                 
-                            
+                            <p class="lead">{j.coms}</p>
+                            <p>InstaPic a l'Instant</p>
                         </div>
                             <img  src={x}   alt="fireSpot"/>
                         
